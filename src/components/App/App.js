@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './App.css';
 import { fetchData } from '../../apiCalls';
 import Tricks from '../Tricks/Tricks'
+import Form from '../Form/Form'
 
 class App extends Component {
   constructor() {
@@ -28,6 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Sick Trick Wish List</h1>
+        <Form />
         {this.state.error && <h2>this.state.error</h2>}
         <Tricks existingTricks={this.state.existingTricks} />
       </div>
