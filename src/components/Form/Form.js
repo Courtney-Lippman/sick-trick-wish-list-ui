@@ -10,19 +10,37 @@ class Form extends Component {
             obstacle: '', 
             tutorial: ''
         }
-        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange(event) {
+    handleChange = (event) => {
         const {name, value} = event.target
         this.setState({
             [name]: value
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        const newTrick = {
+            id: Date.now(),
+            ...this.state
+        }
+        this.props.addTrick(newTrick)
+        this.clearInputs()
+    }
+
+    clearInputs = () => {
+        this.setState({
+            stance: '', 
+            name: '', 
+            obstacle: '', 
+            tutorial: ''
+        })
+    }
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <select
                     value={this.state.stance}
                     name='stance'
