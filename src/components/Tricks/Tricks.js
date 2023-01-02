@@ -10,6 +10,7 @@ const Tricks = ({ existingTricks }) => {
                 name={trick.name}
                 obstacle={trick.obstacle}
                 tutorial={trick.tutorial}
+                key={trick.id}
                 id={trick.id}
             />
         )
