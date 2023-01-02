@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import './Trick.css'
 
-const Card = ({ stance, name, obstacle, tutorial}) => {
+const Trick = ({ stance, name, obstacle, tutorial}) => {
     return (
-        <div className='card'>
+        <div className='trick'>
             <p>{stance} {name}</p>
             <p>obstacle: {obstacle}</p>
             <p>Link to tutorial:</p>
-            <p>{tutorial}</p>
+            <a href={tutorial}>{tutorial}</a>
         </div>
     )
 }
 
-export default Card
+export default Trick

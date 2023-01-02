@@ -1,0 +1,9 @@
+.trick {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 10px;
+}
